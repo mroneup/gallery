@@ -1,0 +1,2 @@
+standard entry point.
+not assigned assets not to be used.

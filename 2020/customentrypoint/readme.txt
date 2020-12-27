@@ -1,1 +1,1 @@
-please dear god spare me from this pain
+hey jacob? fuck off for once, you dumb bitch.

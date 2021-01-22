@@ -19,6 +19,9 @@ body {
   <script>
   $( function() {
     $( "#windoe" ).draggable();
+	$("#closebttn").click(function(){
+ $(this).parent().parent().parent().parent().hide();
+});
   } );
   </script>
   <div id= "windoe" style="width: 300px">
@@ -28,7 +31,7 @@ body {
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
-      <button aria-label="Close"></button>
+      <button id= "closebttn" aria-label="Close"></button>
     </div>
   </div>
   <div  class="window-body">

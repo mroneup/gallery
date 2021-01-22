@@ -19,11 +19,32 @@ body {
   <script>
   $( function() {
     $( "#windoe" ).draggable();
+	$( "#popup" ).draggable();
+	$( "#popupyes" ).draggable();
+	$( "#popup" ).hide();
+	$( "#popupno" ).draggable();
+	$( "#popupno" ).hide();
+	$( "#popupyes" ).hide();
 	$("#closebttn").click(function(){
  $(this).parent().parent().parent().parent().hide();
+ $( "#popup" ).show();
 });
+$("#yes").click(function(){
+ $(this).parent().parent().parent().parent().hide();
+ $( "#popupyes" ).show();
+});
+$("#no").click(function(){
+ $(this).parent().parent().parent().parent().hide();
+ $( "#popupno" ).show();
+});
+$("#repent").click(function(){
+ $(this).parent().parent().parent().hide();
+
+});
+
   } );
   </script>
+  <!-- Fuck Tonne of bullshit -->
   <div id= "windoe" style="width: 300px">
   <div class="window" style="width: 300px">
   <div class="title-bar">
@@ -36,6 +57,56 @@ body {
   </div>
   <div  class="window-body">
     <p><iframe src="stars.html" title="lemme die" width= "280px"></iframe></p>
+  </div>
+</div>
+</div>
+   <div id= "popup" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">Look what you did.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+   <p> You killed those stars. How dare you. Do you know what you did?<p>
+	<button id="no">No</button><button id="yes">Yes</button>
+  </div>
+</div>
+</div>
+
+ <div id= "popupyes" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">Well then.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+   <p> Then Perish.<p>
+	<button onclick="window.close();">Ok</button>
+	
+  </div>
+</div>
+</div>
+<div id= "popupno" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">It's okay.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+    <p>It's okay, don't worry. but don't do that again.</p>
+	<button id="repent">Ok</button>
   </div>
 </div>
 </div>

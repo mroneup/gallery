@@ -1,31 +1,40 @@
 <html>
 <head>
-<title> Registration Form</title>
+<title>Registration Form</title>
 <link rel="stylesheet"href="https://unpkg.com/98.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
- <style> 
+ <style>
 @font-face {
   font-family: 98;
   src: url(98.woff);
 }
-td {
-  font-family: 98;
-}
 </style>
-<body style="background-color:grey;font-family: 98;">
+<body  style="background-color:grey;font-family: 98;">
+  <script>
+  $( function() {
+	$( "#judgement" ).draggable();
+	$( "#judgement" ).hide();
+$("#endbutton").click(function(){
+ $( "#judgement" ).show();
+});
 
 
- 
+  } );
+
+  </script>
+
 <table align="center" cellpadding = "10">
- 
+
 <!----- First Name ---------------------------------------------------------->
 <tr>
-<td>FIRST NAME</td>
+<td >FIRST NAME</td>
 <td><input type="text" name="First_Name" maxlength="30"/>
 
 </td>
 </tr>
- 
+
 <!----- Last Name ---------------------------------------------------------->
 <tr>
 <td>LAST NAME</td>
@@ -33,17 +42,17 @@ td {
 
 </td>
 </tr>
- 
+
 <!----- Date Of Birth -------------------------------------------------------->
 <tr>
 <td>DATE OF BIRTH</td>
- 
+
 <td>
 <select name="Birthday_day" id="Birthday_Day">
 <option value="-1">Day:</option>
 <option value="1">1</option>
 <option value="2">2</option>
-<option value="3">3</option> 
+<option value="3">3</option>
 <option value="4">4</option>
 <option value="5">5</option>
 <option value="6">6</option>
@@ -52,7 +61,7 @@ td {
 <option value="9">9</option>
 <option value="10">10</option>
 <option value="11">11</option>
-<option value="12">12</option> 
+<option value="12">12</option>
 <option value="13">13</option>
 <option value="14">14</option>
 <option value="15">15</option>
@@ -61,7 +70,7 @@ td {
 <option value="18">18</option>
 <option value="19">19</option>
 <option value="20">20</option>
-<option value="21">21</option> 
+<option value="21">21</option>
 <option value="22">22</option>
 <option value="23">23</option>
 <option value="24">24</option>
@@ -71,10 +80,9 @@ td {
 <option value="28">28</option>
 <option value="29">29</option>
 <option value="30">30</option>
- 
 <option value="31">31</option>
 </select>
- 
+
 <select id="Birthday_Month" name="Birthday_Month">
 <option value="-1">Month:</option>
 <option value="January">Jan</option>
@@ -90,9 +98,9 @@ td {
 <option value="November">Nov</option>
 <option value="December">Dec</option>
 </select>
- 
+
 <select name="Birthday_Year" id="Birthday_Year">
- 
+
 <option value="-1">Year:</option>
 <option value="2012">2012</option>
 <option value="2011">2011</option>
@@ -107,19 +115,18 @@ td {
 <option value="2002">2002</option>
 <option value="2001">2001</option>
 <option value="2000">2000</option>
- 
 <option value="1999">I am an immortal elder god</option>
 
 </select>
 </td>
 </tr>
- 
+
 <!----- Email Id ---------------------------------------------------------->
 <tr>
 <td>EMAIL ID</td>
 <td><input type="text" name="Email_Id" maxlength="100" /></td>
 </tr>
- 
+
 <!----- Mobile Number ---------------------------------------------------------->
 <tr>
 <td>MOBILE NUMBER</td>
@@ -128,7 +135,7 @@ td {
 
 </td>
 </tr>
- 
+
 <!----- Gender ----------------------------------------------------------->
 <tr>
 <td>GENDER</td>
@@ -142,13 +149,13 @@ td {
 </select>
 </td>
 </tr>
- 
+
 <!----- Address ---------------------------------------------------------->
 <tr>
 <td>ADDRESS <br /><br /><br /></td>
 <td><textarea name="Address" rows="4" cols="30"></textarea></td>
 </tr>
- 
+
 <!----- City ---------------------------------------------------------->
 <tr>
 <td>CITY</td>
@@ -156,23 +163,37 @@ td {
 
 </td>
 </tr>
- 
- 
+
+
 <!----- Country ---------------------------------------------------------->
 <tr>
 <td>COUNTRY</td>
 <td><input type="text" name="Country"  /></td>
 </tr>
- 
-<!----- Submit and Reset ------------------------------------------------->
-<tr>
-<td colspan="2" align="center">
 
+<!----- Submit and Reset ------------------------------------------------->
+
+<tr>
+<td>
+<button id="endbutton">Submit
 </td>
 </tr>
+</td>
 </table>
- 
+
 </form>
- 
+<div id="judgement" class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">Why?</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Why are you here? You are wasting your time.</p>
+  </div>
+</div>
 </body>
 </html>

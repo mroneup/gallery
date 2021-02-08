@@ -1,0 +1,118 @@
+<!-- what am i doing with my life? -->
+<!-- Just filled with existential dread -->
+<!-- I don't know aht to do anymore -->
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <meta charset="UTF-8">
+    <title>Desktop</title>
+	<style>
+body {
+  background-color: grey;
+}
+</style>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+  <script>
+  $( function() {
+    $( "#windoe" ).draggable();
+	$( "#popup" ).draggable();
+	$( "#popupyes" ).draggable();
+	$( "#popup" ).hide();
+	$( "#popupno" ).draggable();
+	$( "#popupno" ).hide();
+	$( "#popupyes" ).hide();
+	$("#closebttn").click(function(){
+ $(this).parent().parent().parent().parent().hide();
+ $( "#popup" ).show();
+});
+$("#yes").click(function(){
+ $(this).parent().parent().parent().parent().hide();
+ $( "#popupyes" ).show();
+});
+$("#no").click(function(){
+ $(this).parent().parent().parent().parent().hide();
+ $( "#popupno" ).show();
+});
+$("#repent").click(function(){
+ $(this).parent().parent().parent().hide();
+
+});
+
+  } );
+  </script>
+  <!-- Fuck Tonne of bullshit -->
+  <div id= "windoe" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">Look at the stars</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+    <p><iframe src="stars.html" title="lemme die" width= "280px"></iframe></p>
+  </div>
+</div>
+</div>
+   <div id= "popup" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">Look what you did.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+   <p> You killed those stars. How dare you. Do you know what you did?<p>
+	<button id="no">No</button><button id="yes">Yes</button>
+  </div>
+</div>
+</div>
+
+ <div id= "popupyes" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">Well then.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+   <p> Then Perish.<p>
+   <button type="button" onclick="window.open('', '_self', ''); window.close();">Ok</button>
+	<!-- This wassupposed to close the website, but sadly because i dont give a fuck, i am not going to continue trying to fix this. -->
+  </div>
+</div>
+</div>
+<div id= "popupno" style="width: 300px">
+  <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">It's okay.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button id= "closebttn" aria-label="Close"></button>
+    </div>
+  </div>
+  <div  class="window-body">
+    <p>It's okay, don't worry. but don't do that again.</p>
+	<button id="repent">Ok</button>
+  </div>
+</div>
+</div>
+  <div style="color: grey">
+  It'll be here soon
+  </div>
+
+  </body>
+</html>
